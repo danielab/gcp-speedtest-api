@@ -2,85 +2,84 @@ package api.speedtest.models;
 
 public class TestResult {
     private String user;
-    private String device;
-    private String timestamp;
-    Data DataObject;
+    private Integer device;
+    private Long timestamp;
+    Data data;
 
     public String getUser() {
         return user;
     }
 
-    public String getDevice() {
+    public Integer getDevice() {
         return device;
     }
 
-    public String getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
     public Data getData() {
-        return DataObject;
+        return data;
     }
 
     public void setUser(String user) {
         this.user = user;
     }
 
-    public void setDevice(String device) {
+    public void setDevice(Integer device) {
         this.device = device;
     }
 
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
     public void setData(Data dataObject) {
-        this.DataObject = dataObject;
+        this.data = dataObject;
     }
 }
 
 class Data {
-    Speeds SpeedsObject;
-    Client ClientObject;
-    Server ServerObject;
-
+    Speeds Speeds;
+    Client Client;
+    Server Server;
 
     // Getter Methods
 
     public Speeds getSpeeds() {
-        return SpeedsObject;
+        return Speeds;
     }
 
     public Client getClient() {
-        return ClientObject;
+        return Client;
     }
 
     public Server getServer() {
-        return ServerObject;
+        return Server;
     }
 
     // Setter Methods
 
     public void setSpeeds(Speeds speedsObject) {
-        this.SpeedsObject = speedsObject;
+        this.Speeds = speedsObject;
     }
 
     public void setClient(Client clientObject) {
-        this.ClientObject = clientObject;
+        this.Client = clientObject;
     }
 
     public void setServer(Server serverObject) {
-        this.ServerObject = serverObject;
+        this.Server = serverObject;
     }
 }
 class Server {
     private String host;
-    private String lat;
-    private String lon;
+    private Double latitude;
+    private Double longitude;
     private String country;
-    private String distance;
-    private String ping;
-    private String id;
+    private Double distance;
+    private Integer ping;
+    private Integer id;
 
 
     // Getter Methods
@@ -89,27 +88,27 @@ class Server {
         return host;
     }
 
-    public String getLat() {
-        return lat;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public String getLon() {
-        return lon;
+    public Double getLongitude() {
+        return longitude;
     }
 
     public String getCountry() {
         return country;
     }
 
-    public String getDistance() {
+    public Double getDistance() {
         return distance;
     }
 
-    public String getPing() {
+    public Integer getPing() {
         return ping;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -119,34 +118,34 @@ class Server {
         this.host = host;
     }
 
-    public void setLat(String lat) {
-        this.lat = lat;
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 
-    public void setLon(String lon) {
-        this.lon = lon;
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public void setCountry(String country) {
         this.country = country;
     }
 
-    public void setDistance(String distance) {
+    public void setDistance(Double distance) {
         this.distance = distance;
     }
 
-    public void setPing(String ping) {
+    public void setPing(Integer ping) {
         this.ping = ping;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }
 class Client {
     private String ip;
-    private String lat;
-    private String lon;
+    private Double longitude;
+    private Double latitude;
     private String isp;
     private String country;
 
@@ -157,12 +156,12 @@ class Client {
         return ip;
     }
 
-    public String getLat() {
-        return lat;
+    public Double getLongitude() {
+        return longitude;
     }
 
-    public String getLon() {
-        return lon;
+    public Double getLatitude() {
+        return latitude;
     }
 
     public String getIsp() {
@@ -179,12 +178,12 @@ class Client {
         this.ip = ip;
     }
 
-    public void setLat(String lat) {
-        this.lat = lat;
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
-    public void setLon(String lon) {
-        this.lon = lon;
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 
     public void setIsp(String isp) {
@@ -196,27 +195,27 @@ class Client {
     }
 }
 class Speeds {
-    private String download;
-    private String upload;
+    private Double download;
+    private Double upload;
 
 
     // Getter Methods
 
-    public String getDownload() {
+    public Double getDownload() {
         return download;
     }
 
-    public String getUpload() {
+    public Double getUpload() {
         return upload;
     }
 
     // Setter Methods
 
-    public void setDownload(String download) {
+    public void setDownload(Double download) {
         this.download = download;
     }
 
-    public void setUpload(String upload) {
+    public void setUpload(Double upload) {
         this.upload = upload;
     }
 }
